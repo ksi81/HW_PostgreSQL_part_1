@@ -16,6 +16,8 @@ INSERT INTO tasks (title, description, status_id, user_id) VALUES ('Нове з�
 Отримати всі завдання, які ще не завершено. Виберіть завдання, чий статус не є 'завершено'.
 SELECT * FROM tasks WHERE status_id != (SELECT id FROM status WHERE name = 'completed');
 
+SELECT * FROM tasks WHERE status_id <> (SELECT id FROM status WHERE name = 'completed');
+
 Видалити конкретне завдання. Використайте DELETE для видалення завдання за його id.
 DELETE FROM tasks WHERE id = 3;
 
